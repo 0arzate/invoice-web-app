@@ -1,13 +1,11 @@
-import { html } from 'lit';
+import { html, LitElement } from 'lit';
 import { icon } from '@fortawesome/fontawesome-svg-core'
-
-import { CorePage } from '../../utils';
 
 import styles from './fontawesome-icon.css';
 
 import '../../components/app-layout/app-layout';
 
-export class FontawesomeIcon extends CorePage {
+export class FontawesomeIcon extends LitElement {
   constructor() {
     super();
 
