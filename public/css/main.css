@@ -1,0 +1,52 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root{
+  --bg-color: #F8F8FB;
+  --primary-color: #7C5DFA;
+  --primary-color-light: #9277FF;
+  --secondary-color: #7E88C3;
+  --text-color: #0C0E16;
+  --text-color-light: #888EB0;
+  --success-color: #33D69F;
+  --warning-color: #FF8F00;
+  --error-color: #EC5757;
+  --error-color-light: #ff9797;
+  --dark-color-light: #1E2139;
+  --dark-color: #252945;
+
+  --spartan-font: "League Spartan", sans-serif;
+}
+
+.dark_mode{
+  --bg-color: #141625;
+  --text-color: #FFFFFF;
+  --text-color-light: #DFE3FA;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--spartan-font);
+}
+
+main ::slotted([state="active"]) {
+  visibility: visible;
+}
+
+html {
+  font-size: 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.1rem;
+}
