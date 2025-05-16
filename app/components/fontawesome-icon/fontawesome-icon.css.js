@@ -17,6 +17,10 @@ svg {
   width: var(--icon-size);
   color: var(--icon-color);
 }
+
+:host {
+  height: var(--icon-size);
+}
 `;
 
 export default styles;

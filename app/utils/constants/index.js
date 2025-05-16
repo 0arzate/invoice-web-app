@@ -1,3 +1,5 @@
+export * from './components.js';
+
 export const LANGUAGES = Object.freeze({
   "es-MX": 'en-US',
   "en-US": 'es-MX',
