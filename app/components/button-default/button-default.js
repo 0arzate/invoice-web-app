@@ -27,7 +27,7 @@ export class ButtonDefault extends LitElement {
   }
 
   get isIconVariant() {
-    return this.variant === BUTTON_TYPES.ICON;
+    return this.variant === BUTTON_TYPES.ICON || this.variant === BUTTON_TYPES.FULL_ICON;
   }
 
   render() {

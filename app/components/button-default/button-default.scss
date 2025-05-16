@@ -32,3 +32,47 @@ button[variant="icon"] {
 button[variant="icon"] fontawesome-icon {
   --icon-color: var(--button-text-color);
 }
+
+button[variant="dark"] {
+  background-color: var(--dark-button-bg-color);
+  color: var(--dark-button-text-color);
+}
+
+button[variant="dark"]:hover {
+  background-color: var(--dark-button-hover-bg-color);
+}
+
+button[variant="delete"] {
+  background-color: var(--error-color);
+}
+
+
+button[variant="delete"]:hover {
+  background-color: var(--error-color-light);
+}
+
+button[variant="light"],
+button[variant="full-icon"] {
+  background-color: var(--light-button-bg-color);
+  color: var(--light-button-text-color);
+}
+
+button[variant="light"]:hover,
+button[variant="full-icon"]:hover {
+  background-color: var(--light-button-hover-bg-color);
+}
+
+button[variant="full-icon"] {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  line-height: 0px;
+}
+
+button[variant="full-icon"] fontawesome-icon {
+  --icon-color: var(--light-button-text-color);
+  --icon-size: .7rem;
+  margin-bottom: 4px;
+}

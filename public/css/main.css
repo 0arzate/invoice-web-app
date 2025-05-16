@@ -17,6 +17,13 @@
   --dark-color-light: #1E2139;
   --dark-color: #252945;
   --button-text-color: #FFFFFF;
+  --dark-button-bg-color: #373B53;
+  --dark-button-text-color: var(--text-color-light);
+  --dark-button-hover-bg-color: #0C0E16;
+  --light-button-bg-color: #F9FAFE;
+  --light-button-text-color: var(--secondary-color);
+  --light-button-hover-bg-color: #DFE3FA;
+  --light-button-hover-text-color: var(--text-color);
 
   --spartan-font: "League Spartan", sans-serif;
 }
@@ -25,6 +32,11 @@
   --bg-color: #141625;
   --text-color: #FFFFFF;
   --text-color-light: #DFE3FA;
+  --dark-button-hover-bg-color: var(--dark-color-light);
+  --light-button-bg-color: var(--dark-color);
+  --light-button-text-color: #DFE3FA;
+  --light-button-hover-bg-color: #FFFFFF;
+  --light-button-hover-text-color: #DFE3FA;
 }
 
 html,
