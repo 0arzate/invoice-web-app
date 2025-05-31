@@ -14,11 +14,11 @@ export const styles = css`
 }
 
 main {
-  width: 100vw;
+  width: 100dvw;
 }
 
 section {
-  max-width: 95%;
+  max-width: 100%;
   margin: 0 auto;
   height: 100%;
 }

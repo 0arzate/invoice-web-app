@@ -18,6 +18,11 @@ button {
   line-height: 3.6rem;
   letter-spacing: -0.1rem;
 }
+
+main {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
 `;
 
 export default styles;
