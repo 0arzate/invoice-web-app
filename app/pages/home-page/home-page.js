@@ -7,12 +7,14 @@ import styles from './home-page.css';
 import '../../components/app-layout/app-layout';
 import '../../components/button-default/button-default';
 
-import { THEMES } from '../../utils/constants';
-import { faCirclePlus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { BUTTON_TYPES, THEMES } from '../../utils/constants';
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 
 export class HomePage extends CorePage {
   constructor() {
     super();
+
+    this.invoices = [];
   }
 
   static get is() {
@@ -32,15 +34,17 @@ export class HomePage extends CorePage {
     <app-layout>
       <main slot="content">
         ${super.header}
-        <section>
-          <h1 class="title">Invoce app</h1>
-          <button-default
-            variant="light"
-            .icon="${faPlus}"
-            @click="${this.darkModeToggle}"
-          >
-            dark mode
-          </button-default>
+        <section class="invoices-header">
+          <div>
+            <h1>${this.t('home-page.title')}</h1>
+            <h2>${this.t('home-page.subtitle', { invoices: 10 })}</h2>
+          </div>
+          <div>
+            <button-default
+              .variant="${BUTTON_TYPES.ICON}"
+              .icon="${faCirclePlus}"
+            >${this.t('home-page.button.new-invoice')}</button-default>
+          </div>
         </section>
       </main>
     </app-layout>

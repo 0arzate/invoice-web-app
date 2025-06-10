@@ -13,3 +13,32 @@ main {
   display: grid;
   grid-template-columns: min-content 1fr;
 }
+
+section {
+  padding-top: 72px;
+  width: 100%;
+  max-width: 730px;
+  margin: 0px auto;
+}
+
+.invoices-header {
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.invoices-header h1 {
+  font-weight: bold;
+  font-size: 3.2rem;
+  letter-spacing: -0.1rem;
+}
+
+.invoices-header h2 {
+  margin-top: 8px;
+  font-weight: medium;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.25rem;
+  color: var(--text-color-light);
+}
