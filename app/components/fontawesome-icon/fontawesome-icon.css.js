@@ -1,5 +1,4 @@
-
-import { css } from 'lit';
+import { css } from 'lit'
 
 export const styles = css`
 
@@ -21,6 +20,6 @@ svg {
 :host {
   height: var(--icon-size);
 }
-`;
+`
 
-export default styles;
+export default styles

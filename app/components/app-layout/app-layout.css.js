@@ -1,5 +1,4 @@
-
-import { css } from 'lit';
+import { css } from 'lit'
 
 export const styles = css`
 
@@ -22,6 +21,6 @@ section {
   margin: 0 auto;
   height: 100%;
 }
-`;
+`
 
-export default styles;
+export default styles

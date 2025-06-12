@@ -1,17 +1,17 @@
-import { html, LitElement } from "lit";
-import { LocalizeMixin } from "@open-cells/localize";
-import { PageMixin } from "@open-cells/page-mixin";
+import { html, LitElement } from 'lit'
+import { LocalizeMixin } from '@open-cells/localize'
+import { PageMixin } from '@open-cells/page-mixin'
 
-import '../components/app-header/app-header';
+import '../components/app-header/app-header'
 
 export class CorePage extends PageMixin(LocalizeMixin(LitElement)) {
-  constructor() {
-    super();
+  constructor () {
+    super()
   }
 
-  get header() {
+  get header () {
     return html`
       <app-header></app-header>
-    `;
+    `
   }
 }

@@ -1,5 +1,4 @@
-
-import { css } from 'lit';
+import { css } from 'lit'
 
 export const styles = css`
 
@@ -52,6 +51,6 @@ section {
   letter-spacing: 0.25rem;
   color: var(--text-color-light);
 }
-`;
+`
 
-export default styles;
+export default styles

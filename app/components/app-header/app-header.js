@@ -1,40 +1,42 @@
-import { LitElement, html } from "lit";
+import { LitElement, html } from 'lit'
 
-import { faDollarSign, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import { THEMES } from "../../utils/constants/index.js";
+import { faDollarSign, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { THEMES } from '../../utils/constants/index.js'
 
-import styles from "./app-header.css.js";
+import styles from './app-header.css.js'
 
 export class AppHeader extends LitElement {
-  constructor() {
-    super();
+  constructor () {
+    super()
+
+    this.isDarkMode = false
   }
 
-  static get is() {
-    return "app-header";
+  static get is () {
+    return 'app-header'
   }
 
-  static get properties() {
+  static get properties () {
     return {
-      isDarkMode: { type: Boolean },
-    };
+      isDarkMode: { type: Boolean }
+    }
   }
 
-  static get styles() {
-    return styles;
+  static get styles () {
+    return styles
   }
 
-  get iconTheme() {
-    return this.isDarkMode ? faSun : faMoon;
+  get iconTheme () {
+    return this.isDarkMode ? faSun : faMoon
   }
 
-  toggleTheme() {
+  toggleTheme () {
     document.documentElement.classList.toggle(THEMES.DARK_MODE)
 
-    this.isDarkMode = document.documentElement.classList.contains(THEMES.DARK_MODE);
+    this.isDarkMode = document.documentElement.classList.contains(THEMES.DARK_MODE)
   }
 
-  render() {
+  render () {
     return html`
       <header>
         <section class="header__logo">
@@ -50,8 +52,8 @@ export class AppHeader extends LitElement {
           <img />
         </section>
       </header>
-    `;
+    `
   }
 }
 
-customElements.define(AppHeader.is, AppHeader);
+customElements.define(AppHeader.is, AppHeader)

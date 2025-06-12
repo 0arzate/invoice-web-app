@@ -4,7 +4,7 @@ export const routes = [
     name: 'home',
     component: 'home-page',
     action: async () => {
-      await import('../pages/home-page/home-page.js');
-    },
-  },
-];
+      await import('../pages/home-page/home-page.js')
+    }
+  }
+]

@@ -1,35 +1,35 @@
-import { html } from 'lit';
+import { html } from 'lit'
 
-import { CorePage } from '../../utils';
+import { CorePage } from '../../utils'
 
-import styles from './home-page.css';
+import styles from './home-page.css'
 
-import '../../components/app-layout/app-layout';
-import '../../components/button-default/button-default';
+import '../../components/app-layout/app-layout'
+import '../../components/button-default/button-default'
 
-import { BUTTON_TYPES, THEMES } from '../../utils/constants';
-import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import { BUTTON_TYPES, THEMES } from '../../utils/constants'
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
 export class HomePage extends CorePage {
-  constructor() {
-    super();
+  constructor () {
+    super()
 
-    this.invoices = [];
+    this.invoices = []
   }
 
-  static get is() {
-    return 'home-page';
+  static get is () {
+    return 'home-page'
   }
 
-  static get styles() {
+  static get styles () {
     return styles
   }
 
-  darkModeToggle() {
+  darkModeToggle () {
     document.documentElement.classList.toggle(THEMES.DARK_MODE)
   }
 
-  render() {
+  render () {
     return html`
     <app-layout>
       <main slot="content">
@@ -48,8 +48,8 @@ export class HomePage extends CorePage {
         </section>
       </main>
     </app-layout>
-    `;
+    `
   }
 }
 
-customElements.define(HomePage.is, HomePage);
+customElements.define(HomePage.is, HomePage)

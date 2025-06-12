@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { css } from 'lit';
+import { css } from 'lit'
 
 const styles = css`
   :host {
@@ -41,6 +41,6 @@ const styles = css`
   main ::slotted([state="active"]) {
     visibility: visible;
   }
-  `;
+  `
 
-export default styles;
+export default styles

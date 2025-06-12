@@ -1,43 +1,46 @@
-import { LitElement, html } from "lit";
+import { LitElement, html } from 'lit'
 
-import styles from "./button-default.css";
+import styles from './button-default.css'
 
-import "../fontawesome-icon/fontawesome-icon";
+import '../fontawesome-icon/fontawesome-icon'
 
-import { BUTTON_TYPES } from "../../utils/constants";
+import { BUTTON_TYPES } from '../../utils/constants'
 
 export class ButtonDefault extends LitElement {
-  constructor() {
-    super();
+  constructor () {
+    super()
+
+    this.icon = {}
+    this.variant = ''
   }
 
-  static get is() {
-    return "button-default";
+  static get is () {
+    return 'button-default'
   }
 
-  static get properties() {
+  static get properties () {
     return {
       icon: { type: Object },
-      variant: { type: String },
-    };
+      variant: { type: String }
+    }
   }
 
-  static get styles() {
-    return styles;
+  static get styles () {
+    return styles
   }
 
-  get isIconVariant() {
-    return this.variant === BUTTON_TYPES.ICON || this.variant === BUTTON_TYPES.FULL_ICON;
+  get isIconVariant () {
+    return this.variant === BUTTON_TYPES.ICON || this.variant === BUTTON_TYPES.FULL_ICON
   }
 
-  render() {
+  render () {
     return html`
       <button variant="${this.variant}">
         <fontawesome-icon ?hidden="${!this.isIconVariant}" .icon="${this.icon}"></fontawesome-icon>
         <slot></slot>
       </button>
-    `;
+    `
   }
 }
 
-customElements.define(ButtonDefault.is, ButtonDefault);
+customElements.define(ButtonDefault.is, ButtonDefault)

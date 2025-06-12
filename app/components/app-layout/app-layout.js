@@ -1,33 +1,33 @@
-import { LitElement, html } from "lit";
+import { LitElement, html } from 'lit'
 
-import styles from "./app-layout.css.js";
+import styles from './app-layout.css.js'
 
 export class AppLayout extends LitElement {
-  constructor() {
-    super();
+  constructor () {
+    super()
   }
 
-  static get is() {
-    return "app-layout";
+  static get is () {
+    return 'app-layout'
   }
 
-  static get properties() {
-    return {};
+  static get properties () {
+    return {}
   }
 
-  static get styles() {
-    return styles;
+  static get styles () {
+    return styles
   }
 
-  render() {
+  render () {
     return html`
       <main>
         <section>
           <slot name="content"></slot>
         </section>
       </main>
-    `;
+    `
   }
 }
 
-customElements.define(AppLayout.is, AppLayout);
+customElements.define(AppLayout.is, AppLayout)

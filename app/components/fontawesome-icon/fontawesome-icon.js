@@ -1,34 +1,34 @@
-import { html, LitElement } from 'lit';
+import { html, LitElement } from 'lit'
 import { icon } from '@fortawesome/fontawesome-svg-core'
 
-import styles from './fontawesome-icon.css';
+import styles from './fontawesome-icon.css'
 
-import '../../components/app-layout/app-layout';
+import '../../components/app-layout/app-layout'
 
 export class FontawesomeIcon extends LitElement {
-  constructor() {
-    super();
+  constructor () {
+    super()
 
-    this.icon = {};
+    this.icon = {}
   }
 
-  static get is() {
-    return 'fontawesome-icon';
+  static get is () {
+    return 'fontawesome-icon'
   }
 
-  static get styles() {
-    return styles;
+  static get styles () {
+    return styles
   }
 
-  static get properties() {
+  static get properties () {
     return {
-      icon: { type: Object },
-    };
+      icon: { type: Object }
+    }
   }
 
-  render() {
-    return html`${icon(this.icon).node[0]}`;
+  render () {
+    return html`${icon(this.icon).node[0]}`
   }
 }
 
-customElements.define(FontawesomeIcon.is, FontawesomeIcon);
+customElements.define(FontawesomeIcon.is, FontawesomeIcon)

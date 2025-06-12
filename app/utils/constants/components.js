@@ -3,5 +3,5 @@ export const BUTTON_TYPES = Object.freeze({
   FULL_ICON: 'full-icon',
   DARK: 'dark',
   LIGHT: 'light',
-  DELETE: 'delete',
-});
+  DELETE: 'delete'
+})
