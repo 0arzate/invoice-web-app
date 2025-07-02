@@ -9,6 +9,21 @@ export class CorePage extends PageMixin(LocalizeMixin(LitElement)) {
     super()
   }
 
+  showLoader (message) {
+    const loader = document.createElement('app-loader')
+    loader.message = message
+
+    document.body.appendChild(loader)
+  }
+
+  hideLoader () {
+    const loader = document.querySelector('app-loader')
+
+    if (!loader) return
+
+    document.body.removeChild(loader)
+  }
+
   get header () {
     return html`
       <app-header></app-header>

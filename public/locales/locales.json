@@ -5,7 +5,15 @@
 
     "home-page.title": "Facturas",
     "home-page.subtitle": "{ invoices, plural, =0 {No hay facturas} one { 1 factura } other { # facturas } }",
-    "home-page.button.new-invoice": "Nueva factura"
+    "home-page.button.new-invoice": "Nueva factura",
+    "home-page.loader.get-invoices": "Cargando facturas",
+
+    "invoice-card.status.paid": "Pagada",
+    "invoice-card.status.pending": "Pendiente",
+    "invoice-card.status.draft": "Borrador",
+
+    "app-loader.message": "Cargando..."
+
   },
   "en-US": {
     "languages.es-mx": "Spanish",
@@ -13,6 +21,12 @@
 
     "home-page.title": "Invoices",
     "home-page.subtitle": "{ invoices, plural, =0 {No invoices} other { There are # total invoices } }",
-    "home-page.button.new-invoice": "New invoice"
+    "home-page.button.new-invoice": "New invoice",
+    "home-page.loader.get-invoices": "Loading invoices",
+
+    "invoice-card.status.paid": "Paid",
+    "invoice-card.status.pending": "Pending",
+    "invoice-card.status.draft": "Draft",
+    "app-loader.message": "Loading..."
   }
 }

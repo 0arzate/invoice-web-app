@@ -2,6 +2,8 @@ import { LitElement, html } from 'lit'
 
 import styles from './app-layout.css.js'
 
+import '../../components/app-loader/app-loader'
+
 export class AppLayout extends LitElement {
   constructor () {
     super()
