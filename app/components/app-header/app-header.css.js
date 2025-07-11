@@ -16,6 +16,8 @@ export const styles = css`
 }
 
 header {
+  position: fixed;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -21,6 +21,11 @@ button {
 main {
   display: grid;
   grid-template-columns: min-content 1fr;
+  max-height: 100vh;
+}
+
+app-header {
+  max-height: 100vh;
 }
 
 section {
@@ -28,6 +33,7 @@ section {
   width: 100%;
   max-width: 730px;
   margin: 0px auto;
+  max-height: fit-content;
 }
 
 .invoices-header {
@@ -50,6 +56,10 @@ section {
   line-height: 1.5rem;
   letter-spacing: 0.25rem;
   color: var(--text-color-light);
+}
+
+ul {
+  margin: 65px 0px;
 }
 `
 

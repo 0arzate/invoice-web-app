@@ -16,7 +16,14 @@ main {
   width: 100dvw;
 }
 
+slot[name=header] {
+  position: fixed;
+  width: 100%;
+}
+
 section {
+  padding-left: 103px;
+  max-height: 100vh;
   max-width: 100%;
   margin: 0 auto;
   height: 100%;

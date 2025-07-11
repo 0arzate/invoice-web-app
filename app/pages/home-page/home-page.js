@@ -54,8 +54,8 @@ export class HomePage extends CorePage {
       <app-layout>
         <main slot="content">
           ${super.header}
-          <section>
 
+          <section>
             <header class="invoices-header">
               <div>
                 <h1>${this.t('home-page.title')}</h1>
@@ -69,13 +69,14 @@ export class HomePage extends CorePage {
               </div>
             </header>
 
-            ${this.invoices.map((invoice) => html`
-              <invoice-card
-                .loading="${this.isLoading}"
-                .data="${invoice}"
-              ></invoice-card>
-            `)}
-
+            <ul>
+              ${this.invoices.map((invoice) => html`
+                <invoice-card
+                  .loading="${this.isLoading}"
+                  .data="${invoice}"
+                ></invoice-card>
+              `)}
+            </ul>
           </section>
         </main>
       </app-layout>
