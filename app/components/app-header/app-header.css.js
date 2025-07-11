@@ -1,4 +1,5 @@
-import { css } from 'lit'
+
+import { css } from 'lit';
 
 export const styles = css`
 
@@ -22,6 +23,7 @@ header {
   background-color: var(--bg-color);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  max-height: 100vh;
 }
 
 .header__logo {
@@ -70,6 +72,6 @@ header {
   --icon-color: var(--icon-theme-color);
   margin: 0px auto;
 }
-`
+`;
 
-export default styles
+export default styles;
