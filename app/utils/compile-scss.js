@@ -10,8 +10,7 @@ const isWatchMode = process.argv.includes('--watch')
 
 const inputDir = 'app'
 
-const getCSSTemplate = (result) => `
-import { css } from 'lit';
+const getCSSTemplate = (result) => `import { css } from 'lit'
 
 export const styles = css\`
 
@@ -21,9 +20,9 @@ export const styles = css\`
 }
 
 ${result.css}
-\`;
+\`
 
-export default styles;
+export default styles
 `
 
 function compileScss (filePath = '') {
