@@ -1,4 +1,4 @@
-import { INVOICE_STATUS } from '../../constants/service-data'
+import { INVOICE_STATUS, INVOICE_STATUS_CLASS } from '../../constants/service-data'
 
 export function getInvoicesNormalize (serviceResponse) {
   if (!serviceResponse || !serviceResponse.data || !serviceResponse.data.length) {
@@ -14,7 +14,9 @@ export function getInvoicesNormalize (serviceResponse) {
       id: invoice.id,
       date: invoice.date,
       receiver: invoice?.receiver?.name,
-      status: INVOICE_STATUS[status] || ''
+      status: INVOICE_STATUS[status] || '',
+      statusClass: INVOICE_STATUS_CLASS[status] || '',
+      amount: invoice?.amount || 0
     }
   })
 }

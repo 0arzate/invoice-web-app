@@ -4,4 +4,10 @@ export const INVOICE_STATUS = Object.freeze({
   draft: 'invoice-card.status.draft'
 })
 
+export const INVOICE_STATUS_CLASS = Object.freeze({
+  paid: 'status-success',
+  pending: 'status-warning',
+  draft: 'status-draft'
+})
+
 export const INVOICE_ID_ICON = '#'
