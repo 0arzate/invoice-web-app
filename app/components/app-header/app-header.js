@@ -26,6 +26,18 @@ export class AppHeader extends LitElement {
     return styles
   }
 
+  firstUpdated () {
+    this.setCurrentTheme()
+  }
+
+  setCurrentTheme () {
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+
+    if (isDarkMode === 'true') {
+      this.toggleTheme()
+    }
+  }
+
   get iconTheme () {
     return this.isDarkMode ? faSun : faMoon
   }
@@ -34,6 +46,12 @@ export class AppHeader extends LitElement {
     document.documentElement.classList.toggle(THEMES.DARK_MODE)
 
     this.isDarkMode = document.documentElement.classList.contains(THEMES.DARK_MODE)
+
+    this.saveInLocalStorage()
+  }
+
+  saveInLocalStorage () {
+    window.localStorage.setItem('isDarkMode', this.isDarkMode)
   }
 
   render () {
