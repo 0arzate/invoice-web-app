@@ -1,5 +1,4 @@
-
-import { css } from 'lit';
+import { css } from 'lit'
 
 export const styles = css`
 
@@ -48,6 +47,6 @@ main section h2 {
     transform: rotate(360deg);
   }
 }
-`;
+`
 
-export default styles;
+export default styles

@@ -1,5 +1,4 @@
-
-import { css } from 'lit';
+import { css } from 'lit'
 
 export const styles = css`
 
@@ -85,6 +84,6 @@ button[variant=full-icon] fontawesome-icon {
   --icon-size: .7rem;
   margin-bottom: 4px;
 }
-`;
+`
 
-export default styles;
+export default styles

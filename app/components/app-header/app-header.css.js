@@ -1,5 +1,4 @@
-
-import { css } from 'lit';
+import { css } from 'lit'
 
 export const styles = css`
 
@@ -74,6 +73,6 @@ header {
   --icon-color: var(--icon-theme-color);
   margin: 0px auto;
 }
-`;
+`
 
-export default styles;
+export default styles

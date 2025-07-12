@@ -1,5 +1,4 @@
-
-import { css } from 'lit';
+import { css } from 'lit'
 
 export const styles = css`
 
@@ -85,6 +84,6 @@ article fontawesome-icon {
 .status p {
   margin-top: 2px;
 }
-`;
+`
 
-export default styles;
+export default styles
