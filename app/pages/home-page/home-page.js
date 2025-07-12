@@ -49,6 +49,27 @@ export class HomePage extends CorePage {
     this.invoices = invoices
   }
 
+  get renderInvoices () {
+    if (!this.invoices || !this.invoices.length) {
+      return html`
+        <section class="invoices-empty">
+          <img src="https://i.ibb.co/35qpBryz/invoices-app-not-found-invoices.png" alt="No invoices found" />
+          <h3>${this.t('home-page.messages.not-found.title')}</h3>
+          <p>${this.t('home-page.messages.not-found.description')}</p>
+        </section>
+      `
+    }
+
+    return this.invoices.map((invoice) => html`
+      <ul>
+        <invoice-card
+          .loading="${this.isLoading}"
+          .data="${invoice}"
+        ></invoice-card>
+      </ul>
+    `)
+  }
+
   render () {
     return html`
       <app-layout>
@@ -69,14 +90,7 @@ export class HomePage extends CorePage {
               </div>
             </header>
 
-            <ul>
-              ${this.invoices.map((invoice) => html`
-                <invoice-card
-                  .loading="${this.isLoading}"
-                  .data="${invoice}"
-                ></invoice-card>
-              `)}
-            </ul>
+            ${this.renderInvoices}
           </section>
         </main>
       </app-layout>
@@ -85,6 +99,7 @@ export class HomePage extends CorePage {
         @invoices-loading="${() => this.showLoader('home-page.loader.get-invoices')}"
         @invoices-success="${this.setInvoices}"
         @invoices-finished="${() => this.hideLoader()}"
+        @invoices-error="${(event) => console.log(event)}"
       ></get-invoices>
     `
   }

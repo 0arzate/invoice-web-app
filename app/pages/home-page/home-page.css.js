@@ -61,6 +61,36 @@ section {
 ul {
   margin: 65px 0px;
 }
+
+.invoices-empty {
+  margin-top: 121px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.invoices-empty img {
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 64px;
+}
+
+.invoices-empty h3 {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: -0.063rem;
+  margin-bottom: 24px;
+}
+
+.invoices-empty p {
+  width: 220px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.025rem;
+  color: var(--text-color-light);
+}
 `
 
 export default styles

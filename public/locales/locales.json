@@ -7,6 +7,8 @@
     "home-page.subtitle": "{ invoices, plural, =0 {No hay facturas} one { 1 factura } other { # facturas } }",
     "home-page.button.new-invoice": "Nueva factura",
     "home-page.loader.get-invoices": "Cargando facturas",
+    "home-page.messages.not-found.title": "No hay nada aquí",
+    "home-page.messages.not-found.description": "Crea una factura haciendo clic en el botón 'Nueva factura' y empieza.",
 
     "invoice-card.status.paid": "Pagada",
     "invoice-card.status.pending": "Pendiente",
@@ -23,6 +25,8 @@
     "home-page.subtitle": "{ invoices, plural, =0 {No invoices} other { There are # total invoices } }",
     "home-page.button.new-invoice": "New invoice",
     "home-page.loader.get-invoices": "Loading invoices",
+    "home-page.messages.not-found.title": "There is nothing here",
+    "home-page.messages.not-found.description": "Create an invoice by clicking the New Invoice button and get started",
 
     "invoice-card.status.paid": "Paid",
     "invoice-card.status.pending": "Pending",
