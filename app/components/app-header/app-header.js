@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit'
 
-import { faDollarSign, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
-import { THEMES } from '../../utils/constants/index.js'
+import { faDollarSign, faLanguage, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { LANGUAGES, THEMES } from '../../utils/constants/index.js'
 
 import styles from './app-header.css.js'
 
@@ -28,6 +28,7 @@ export class AppHeader extends LitElement {
 
   firstUpdated () {
     this.setCurrentTheme()
+    this.setCurrentLanguage()
   }
 
   setCurrentTheme () {
@@ -36,6 +37,12 @@ export class AppHeader extends LitElement {
     if (isDarkMode === 'true') {
       this.toggleTheme()
     }
+  }
+
+  setCurrentLanguage () {
+    const language = window.localStorage.getItem('language') || LANGUAGES.EN
+
+    document.documentElement.setAttribute('lang', language)
   }
 
   get iconTheme () {
@@ -47,11 +54,20 @@ export class AppHeader extends LitElement {
 
     this.isDarkMode = document.documentElement.classList.contains(THEMES.DARK_MODE)
 
-    this.saveInLocalStorage()
+    this.saveInLocalStorage('isDarkMode', this.isDarkMode)
   }
 
-  saveInLocalStorage () {
-    window.localStorage.setItem('isDarkMode', this.isDarkMode)
+  saveInLocalStorage (key, newValue) {
+    window.localStorage.setItem(key, newValue)
+  }
+
+  toggleLanguage () {
+    const currentLanguage = window.localStorage.getItem('language') || LANGUAGES.EN
+    const newLanguage = currentLanguage === LANGUAGES.EN ? LANGUAGES.ES : LANGUAGES.EN
+
+    document.documentElement.setAttribute('lang', newLanguage)
+
+    this.saveInLocalStorage('language', newLanguage)
   }
 
   render () {
@@ -64,6 +80,12 @@ export class AppHeader extends LitElement {
         </section>
         <section class="header__theme">
           <fontawesome-icon
+            class="header__theme--language"
+            .icon="${faLanguage}"
+            @click="${this.toggleLanguage}"
+          ></fontawesome-icon>
+          <fontawesome-icon
+            class="header__theme--theme"
             .icon="${this.iconTheme}"
             @click="${this.toggleTheme}"
           ></fontawesome-icon>

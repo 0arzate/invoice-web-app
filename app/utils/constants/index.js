@@ -1,8 +1,8 @@
 export * from './components.js'
 
 export const LANGUAGES = Object.freeze({
-  'es-MX': 'en-US',
-  'en-US': 'es-MX'
+  EN: 'en-US',
+  ES: 'es-MX'
 })
 
 export const LANGUAGES_LABELS = Object.freeze({

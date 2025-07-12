@@ -53,6 +53,7 @@ header {
 
 .header__theme {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 0 32px;
@@ -60,7 +61,14 @@ header {
 
 .header__theme fontawesome-icon {
   padding-bottom: 32px;
-  --icon-size: 2rem;
-  --icon-color: var(--icon-theme-color);
   margin: 0px auto;
+  --icon-color: var(--icon-theme-color);
+}
+
+.header__theme--theme {
+  --icon-size: 2rem;
+}
+
+.header__theme--language {
+  --icon-size: 2.7rem;
 }
