@@ -6,7 +6,7 @@ import { LocalizeMixin } from '@open-cells/localize'
 
 import styles from './invoice-card.css.js'
 
-import '../../components/fontawesome-icon/fontawesome-icon'
+import { EVENTS } from '../../utils/constants/'
 
 export class InvoiceCard extends LocalizeMixin(LitElement) {
   constructor () {
@@ -30,6 +30,16 @@ export class InvoiceCard extends LocalizeMixin(LitElement) {
     return styles
   }
 
+  dispatchOpenDetailEvent () {
+    const event = new CustomEvent(EVENTS.OPEN_INVOICE_DETAIL, {
+      bubbles: true,
+      composed: true,
+      detail: { id: this.data.id }
+    })
+
+    this.dispatchEvent(event)
+  }
+
   render () {
     return html`
       <article>
@@ -43,7 +53,7 @@ export class InvoiceCard extends LocalizeMixin(LitElement) {
           <fontawesome-icon .icon="${faCircle}"></fontawesome-icon>
           <p>${this.t(this.data.status)}</p>
         </span>
-        <fontawesome-icon .icon="${faChevronRight}"></fontawesome-icon>
+        <fontawesome-icon @click="${this.dispatchOpenDetailEvent}" .icon="${faChevronRight}"></fontawesome-icon>
       </article>
     `
   }

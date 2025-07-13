@@ -2,8 +2,6 @@ import { LitElement, html } from 'lit'
 
 import styles from './button-default.css'
 
-import '../fontawesome-icon/fontawesome-icon'
-
 import { BUTTON_TYPES } from '../../utils/constants'
 
 export class ButtonDefault extends LitElement {

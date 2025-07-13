@@ -60,14 +60,23 @@ export class HomePage extends CorePage {
       `
     }
 
-    return this.invoices.map((invoice) => html`
+    return html`
       <ul>
-        <invoice-card
-          .loading="${this.isLoading}"
-          .data="${invoice}"
-        ></invoice-card>
+        ${this.invoices.map((invoice) => html`
+          <invoice-card
+            @open-invoice-detail="${this.navigateToInvoiceDetail}"
+            .loading="${this.isLoading}"
+            .data="${invoice}"
+          ></invoice-card>
+        `)}
       </ul>
-    `)
+    `
+  }
+
+  navigateToInvoiceDetail (event) {
+    const { id } = event.detail
+
+    this.navigate('invoice-detail', { id })
   }
 
   render () {
