@@ -21,6 +21,7 @@ button {
 }
 
 button:hover {
+  cursor: pointer;
   background-color: var(--primary-color-light);
   transition: all 0.3s ease-in-out;
 }

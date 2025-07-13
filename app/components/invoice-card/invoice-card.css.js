@@ -33,6 +33,7 @@ h2 span {
 }
 
 article fontawesome-icon {
+  cursor: pointer;
   --icon-size: 8px;
   --icon-color: var(--primary-color);
 }

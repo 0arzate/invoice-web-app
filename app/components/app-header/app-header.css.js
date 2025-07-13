@@ -69,8 +69,9 @@ header {
 }
 
 .header__theme fontawesome-icon {
-  padding-bottom: 32px;
+  cursor: pointer;
   margin: 0px auto;
+  margin-bottom: 32px;
   --icon-color: var(--icon-theme-color);
 }
 

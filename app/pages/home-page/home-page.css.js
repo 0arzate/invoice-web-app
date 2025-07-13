@@ -22,6 +22,7 @@ main {
   display: grid;
   grid-template-columns: min-content 1fr;
   max-height: 100vh;
+  overflow-x: hidden;
 }
 
 app-header {
