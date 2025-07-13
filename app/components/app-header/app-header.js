@@ -26,25 +26,6 @@ export class AppHeader extends LitElement {
     return styles
   }
 
-  firstUpdated () {
-    this.setCurrentTheme()
-    this.setCurrentLanguage()
-  }
-
-  setCurrentTheme () {
-    const isDarkMode = window.localStorage.getItem('isDarkMode')
-
-    if (isDarkMode === 'true') {
-      this.toggleTheme()
-    }
-  }
-
-  setCurrentLanguage () {
-    const language = window.localStorage.getItem('language') || LANGUAGES.EN
-
-    document.documentElement.setAttribute('lang', language)
-  }
-
   get iconTheme () {
     return this.isDarkMode ? faSun : faMoon
   }
