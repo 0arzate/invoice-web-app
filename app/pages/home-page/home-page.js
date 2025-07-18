@@ -76,6 +76,7 @@ export class HomePage extends CorePage {
   navigateToInvoiceDetail (event) {
     const { id } = event.detail
 
+    this.publish('invoice-data', event.detail)
     this.navigate('invoice-detail', { id })
   }
 
@@ -105,7 +106,7 @@ export class HomePage extends CorePage {
       </app-layout>
 
       <get-invoices
-        @invoices-loading="${() => this.showLoader('home-page.loader.get-invoices')}"
+        @invoices-loading="${() => this.showLoader('home-page.loader.get-invoices', { invoiceId: this.params.id })}"
         @invoices-success="${this.setInvoices}"
         @invoices-finished="${() => this.hideLoader()}"
         @invoices-error="${(event) => console.log(event)}"

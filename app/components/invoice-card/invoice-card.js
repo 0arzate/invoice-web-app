@@ -34,7 +34,7 @@ export class InvoiceCard extends LocalizeMixin(LitElement) {
     const event = new CustomEvent(EVENTS.OPEN_INVOICE_DETAIL, {
       bubbles: true,
       composed: true,
-      detail: { id: this.data.id }
+      detail: this.data
     })
 
     this.dispatchEvent(event)

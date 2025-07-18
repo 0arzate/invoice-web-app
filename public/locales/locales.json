@@ -14,7 +14,9 @@
     "invoice-card.status.pending": "Pendiente",
     "invoice-card.status.draft": "Borrador",
 
-    "app-loader.message": "Cargando..."
+    "app-loader.message": "Cargando...",
+
+    "invoice-detail-page.loader.get-invoice-detail": "Cargando detalle de factura"
 
   },
   "en-US": {

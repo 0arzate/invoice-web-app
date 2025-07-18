@@ -2,6 +2,7 @@ import { LitElement, nothing } from 'lit'
 
 import { ServiceGET } from '../service-get'
 import { HOST } from '../../constants/env'
+import { getInvoicesNormalize } from '../normalize/get-invoices-normalize'
 
 export const GET_INVOICE_DETAIL_EVENTS = Object.freeze({
   LOADING: 'invoice-detail-loading',
@@ -45,9 +46,10 @@ export class GetInvoiceDetail extends LitElement {
     this.dispatchCustomEvent(GET_INVOICE_DETAIL_EVENTS.LOADING)
 
     try {
-      const response = await this.service.generateRequest()
+      const { data } = await this.service.generateRequest()
+      const invoice = getInvoicesNormalize({ data: [data] })
 
-      this.dispatchCustomEvent(GET_INVOICE_DETAIL_EVENTS.SUCCESS, response)
+      this.dispatchCustomEvent(GET_INVOICE_DETAIL_EVENTS.SUCCESS, invoice[0])
     } catch (error) {
       this.dispatchCustomEvent(GET_INVOICE_DETAIL_EVENTS.ERROR, error.message)
     } finally {
