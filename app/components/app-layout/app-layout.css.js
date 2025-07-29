@@ -28,6 +28,12 @@ section {
   margin: 0 auto;
   height: 100%;
 }
+
+@media (max-width: 768px) {
+  section {
+    padding-left: 0;
+  }
+}
 `
 
 export default styles

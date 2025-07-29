@@ -92,6 +92,16 @@ ul {
   letter-spacing: 0.025rem;
   color: var(--text-color-light);
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  section {
+    padding-top: 56px;
+    max-width: 90%;
+  }
+}
 `
 
 export default styles

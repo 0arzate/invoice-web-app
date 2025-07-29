@@ -73,3 +73,41 @@ header {
 .header__theme--language {
   --icon-size: 2.7rem;
 }
+
+
+@media (max-width: 768px) {
+  header {
+    position: relative;
+    width: 100%;
+    min-height: 80px;
+    flex-direction: row;
+    border-radius: 0px;
+  }
+
+  .header__theme {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header__theme fontawesome-icon {
+    margin: 0px 8px;
+    margin-right: 12px;
+  }
+
+  .header__theme fontawesome-icon:nth-child(2) {
+    margin-bottom: 10px;
+  }
+
+  .header__logo fontawesome-icon {
+    top: -10px;
+    --icon-size: 2.5rem;
+  }
+
+  .header__logo span:nth-child(1) {
+    height: 40px;
+  }
+
+  .header__logo span:nth-child(3) {
+    height: 40px;
+  }
+}
