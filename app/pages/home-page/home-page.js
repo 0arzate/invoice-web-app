@@ -10,6 +10,7 @@ import styles from './home-page.css'
 import '../../components/app-layout/app-layout'
 import '../../components/button-default/button-default'
 import '../../components/invoice-card/invoice-card'
+import '../../components/app-dropdown/app-dropdown'
 import '../../utils/services/logical-components/get-invoices'
 
 export class HomePage extends CorePage {
@@ -92,7 +93,8 @@ export class HomePage extends CorePage {
                 <h1>${this.t('home-page.title')}</h1>
                 <h2>${this.t('home-page.subtitle', { invoices: 10 })}</h2>
               </div>
-              <div>
+              <div class="invoices-header-actions">
+                <app-dropdown></app-dropdown>
                 <button-default
                   .variant="${BUTTON_TYPES.ICON}"
                   .icon="${faCirclePlus}"

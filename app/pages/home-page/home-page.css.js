@@ -59,6 +59,12 @@ section {
   color: var(--text-color-light);
 }
 
+.invoices-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 ul {
   margin: 65px 0px;
 }
