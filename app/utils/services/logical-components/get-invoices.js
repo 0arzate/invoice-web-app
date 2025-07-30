@@ -14,6 +14,8 @@ export const GET_INVOICE_EVENTS = Object.freeze({
 export class GetInvoices extends LitElement {
   constructor () {
     super()
+
+    this.queries = {}
     this.service = new ServiceGET({
       host: HOST
     })
@@ -24,15 +26,29 @@ export class GetInvoices extends LitElement {
   }
 
   static get properties () {
-    return {}
+    return {
+      queries: { type: Object }
+    }
   }
 
   firstUpdated () {
     this.getInvoices()
   }
 
+  update (changedProperties) {
+    const queriesChanged = changedProperties.has('queries')
+    const previousQueries = changedProperties.get('queries')
+
+    if (queriesChanged && previousQueries) {
+      this.getInvoices()
+    }
+
+    super.update(changedProperties)
+  }
+
   async getInvoices () {
     this.service.path = '/invoices'
+    this.service.config.params = this.queries
 
     this.dispatchCustomEvent(GET_INVOICE_EVENTS.LOADING)
 
