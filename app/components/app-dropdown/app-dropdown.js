@@ -2,6 +2,7 @@ import { LitElement, html } from 'lit'
 
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { LocalizeMixin } from '@open-cells/localize'
+import { EVENTS } from '../../utils/constants/events.js'
 
 import styles from './app-dropdown.css.js'
 
@@ -11,9 +12,9 @@ export class AppDropdown extends LocalizeMixin(LitElement) {
 
     this.showOptions = false
     this.options = [
-      { name: 'pendiente', value: 'PENDING' },
-      { name: 'pagada', value: 'PAID' },
-      { name: 'borrador', value: 'DRAFT' }
+      { name: 'Pendiente', value: 'pending' },
+      { name: 'Pagada', value: 'paid' },
+      { name: 'Borrador', value: 'draft' }
     ]
   }
 
@@ -36,6 +37,16 @@ export class AppDropdown extends LocalizeMixin(LitElement) {
     this.showOptions = !this.showOptions
   }
 
+  dispatchDropdownChangeEvent (option, ev) {
+    const checked = ev?.target?.checked
+
+    this.dispatchEvent(new CustomEvent(EVENTS.DROPDOWN_CHANGE, {
+      bubbles: true,
+      composed: true,
+      detail: { ...option, checked }
+    }))
+  }
+
   render () {
     return html`
       <main>
@@ -44,7 +55,11 @@ export class AppDropdown extends LocalizeMixin(LitElement) {
         <ul ?hidden="${!this.showOptions}">
           ${this.options.map((option) => html`
             <li value="${option.value}">
-              <input name="${option.value}" type="checkbox" />
+              <input
+                @input="${(ev) => this.dispatchDropdownChangeEvent(option, ev)}"
+                name="${option.value}"
+                type="checkbox"
+              />
               ${option.name}
             </li>
           `)}
