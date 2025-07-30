@@ -32,6 +32,8 @@
   --invoice-card-bg-color: #FFFFFF;
 
   --spartan-font: "League Spartan", sans-serif;
+
+  --dropdown-bg-color: #FFFFFF;
 }
 
 .dark_mode{
@@ -47,6 +49,8 @@
   --draft-color: #DFE3FA;
 
   --invoice-card-bg-color: #1E2139;
+
+  --dropdown-bg-color: var(--dark-color);
 }
 
 html,

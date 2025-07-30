@@ -16,8 +16,9 @@
 
     "app-loader.message": "Cargando...",
 
-    "invoice-detail-page.loader.get-invoice-detail": "Cargando detalle de factura"
+    "invoice-detail-page.loader.get-invoice-detail": "Cargando detalle de factura",
 
+    "app-dropdown.label": "Filtrar por estado"
   },
   "en-US": {
     "languages.es-mx": "Spanish",
@@ -33,6 +34,8 @@
     "invoice-card.status.paid": "Paid",
     "invoice-card.status.pending": "Pending",
     "invoice-card.status.draft": "Draft",
-    "app-loader.message": "Loading..."
+    "app-loader.message": "Loading...",
+
+    "app-dropdown.label": "Filter by status"
   }
 }
