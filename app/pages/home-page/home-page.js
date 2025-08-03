@@ -17,6 +17,7 @@ export class HomePage extends CorePage {
   constructor () {
     super()
 
+    this.queries = []
     this.invoices = []
     this.isLoading = false
   }
@@ -83,17 +84,23 @@ export class HomePage extends CorePage {
 
   setGetInvoiceQueries (event) {
     const isChecked = event?.detail?.checked
-    const getInvoices = this.shadowRoot.querySelector('get-invoices')
-    const currentStatusQuery = getInvoices.queries?.status || ''
+    const queryValue = event?.detail?.value || ''
 
     if (!isChecked) {
-      getInvoices.queries = { status: currentStatusQuery.replace(event?.detail?.value, '') }
-      return
+      this.queries = this.queries.filter((query) => query !== queryValue)
     }
 
-    const optionValue = event?.detail?.value
+    if (isChecked) {
+      this.queries = [...this.queries, queryValue]
+    }
 
-    getInvoices.queries = { status: `${optionValue},${currentStatusQuery}` }
+    this.updateQueries()
+  }
+
+  updateQueries () {
+    const getInvoices = this.shadowRoot.querySelector('get-invoices')
+
+    getInvoices.queries = { status: this.queries.join(',') }
   }
 
   render () {
@@ -106,7 +113,7 @@ export class HomePage extends CorePage {
             <header class="invoices-header">
               <div>
                 <h1>${this.t('home-page.title')}</h1>
-                <h2>${this.t('home-page.subtitle', { invoices: 10 })}</h2>
+                <h2>${this.t('home-page.subtitle', { invoices: this.invoices.length })}</h2>
               </div>
               <div class="invoices-header-actions">
                 <app-dropdown @dropdown-change="${this.setGetInvoiceQueries}"></app-dropdown>
