@@ -17,7 +17,7 @@ main {
   height: 100dvh;
   display: grid;
   place-content: center;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: var(--loader-bg-color);
 }
 
 main section {
@@ -27,16 +27,17 @@ main section {
 }
 
 main section fontawesome-icon {
-  --icon-size: 6rem;
+  --icon-size: 4.5rem;
+  --icon-color: var(--loader-text-color);
   will-change: transform;
   animation: rotate 1.6s linear infinite;
   margin-bottom: 20px;
 }
 
 main section h2 {
-  color: var(--primary-color);
+  color: var(--loader-text-color);
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 1.9rem;
 }
 
 @keyframes rotate {

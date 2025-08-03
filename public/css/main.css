@@ -28,6 +28,8 @@
   --light-button-text-color: var(--secondary-color);
   --light-button-hover-bg-color: #DFE3FA;
   --light-button-hover-text-color: var(--text-color);
+  --loader-bg-color: rgba(255, 255, 255, 0.6);
+  --loader-text-color: var(--primary-color);
 
   --invoice-card-bg-color: #FFFFFF;
 
@@ -47,6 +49,8 @@
   --light-button-hover-text-color: #DFE3FA;
   --draft-bg-color: rgba(223, 227, 250, 0.057);
   --draft-color: #DFE3FA;
+  --loader-bg-color: rgba(0, 0, 0, 0.5);
+  --loader-text-color: var(--text-color);
 
   --invoice-card-bg-color: #1E2139;
 

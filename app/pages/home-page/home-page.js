@@ -81,6 +81,21 @@ export class HomePage extends CorePage {
     this.navigate('invoice-detail', { id })
   }
 
+  setGetInvoiceQueries (event) {
+    const isChecked = event?.detail?.checked
+    const getInvoices = this.shadowRoot.querySelector('get-invoices')
+    const currentStatusQuery = getInvoices.queries?.status || ''
+
+    if (!isChecked) {
+      getInvoices.queries = { status: currentStatusQuery.replace(event?.detail?.value, '') }
+      return
+    }
+
+    const optionValue = event?.detail?.value
+
+    getInvoices.queries = { status: `${optionValue},${currentStatusQuery}` }
+  }
+
   render () {
     return html`
       <app-layout>
@@ -94,7 +109,7 @@ export class HomePage extends CorePage {
                 <h2>${this.t('home-page.subtitle', { invoices: 10 })}</h2>
               </div>
               <div class="invoices-header-actions">
-                <app-dropdown></app-dropdown>
+                <app-dropdown @dropdown-change="${this.setGetInvoiceQueries}"></app-dropdown>
                 <button-default
                   .variant="${BUTTON_TYPES.ICON}"
                   .icon="${faCirclePlus}"
