@@ -12,6 +12,7 @@ article {
 }
 
 article h2 {
+  grid-area: id;
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -24,6 +25,10 @@ h2 span {
   color: var(--secondary-color);
 }
 
+.invoice-receiver {
+  grid-area: name;
+}
+
 article fontawesome-icon {
   cursor: pointer;
   --icon-size: 8px;
@@ -31,6 +36,7 @@ article fontawesome-icon {
 }
 
 .status {
+  grid-area: status;
   padding: 12px 0px;
   min-width: 104px;
   text-align: center;
@@ -42,6 +48,7 @@ article fontawesome-icon {
 }
 
 .invoice-amount {
+  grid-area: amount;
   font-weight: 500;
   font-size: 1.6rem;
   color: var(--text-color);
@@ -76,4 +83,45 @@ article fontawesome-icon {
 
 .status p {
   margin-top: 2px;
+}
+
+@media (max-width: 510px) {
+  article {
+    max-height: 134px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "id name"
+      "date status"
+      "amount status";
+  }
+
+  article fontawesome-icon {
+    display: none;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  .invoice-date {
+    margin-top: auto;
+  }
+
+  .invoice-receiver {
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+
+  .invoice-amount {
+    margin-top: auto;
+  }
+
+  .status {
+    margin-left: auto;
+    margin-top: 27px;
+    max-width: 104px;
+  }
 }

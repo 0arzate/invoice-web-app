@@ -46,8 +46,8 @@ export class InvoiceCard extends LocalizeMixin(LitElement) {
         <h2>
           <span>${INVOICE_ID_ICON}</span>${this.data.id}
         </h2>
-        <p class="light-text">${this.data.date}</p>
-        <p class="light-text">${this.data.receiver}</p>
+        <p class="light-text invoice-date">${this.data.date}</p>
+        <p class="light-text invoice-receiver">${this.data.receiver}</p>
         <p class="invoice-amount">${this.data.amount}</p>
         <span class="status ${this.data.statusClass}">
           <fontawesome-icon .icon="${faCircle}"></fontawesome-icon>
