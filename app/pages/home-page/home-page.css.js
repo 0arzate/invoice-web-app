@@ -107,6 +107,9 @@ ul {
     padding-top: 56px;
     max-width: 90%;
   }
+  .invoices-header-actions {
+    gap: 18px;
+  }
 }
 `
 

@@ -10,3 +10,7 @@ export const THEMES = Object.freeze({
   LIGHT_MODE: 'light_mode',
   DARK_MODE: 'dark_mode'
 })
+
+export const MEDIA_QUERIES = Object.freeze({
+  MOBILE: 768
+})

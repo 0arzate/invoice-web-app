@@ -11,6 +11,7 @@ export class AppDropdown extends LocalizeMixin(LitElement) {
     super()
 
     this.showOptions = false
+    this.label = 'app-dropdown.label'
     this.options = [
       { name: 'Pendiente', value: 'pending' },
       { name: 'Pagada', value: 'paid' },
@@ -25,6 +26,7 @@ export class AppDropdown extends LocalizeMixin(LitElement) {
   static get properties () {
     return {
       options: { type: Array },
+      label: { type: String },
       showOptions: { type: Boolean, attribute: 'show-options', reflect: true }
     }
   }
@@ -50,7 +52,7 @@ export class AppDropdown extends LocalizeMixin(LitElement) {
   render () {
     return html`
       <main>
-        <p>${this.t('app-dropdown.label')}</p>
+        <p>${this.t(this.label)}</p>
         <fontawesome-icon @click="${this.toggleShowOptions}" .icon="${faChevronDown}"></fontawesome-icon>
         <ul ?hidden="${!this.showOptions}">
           ${this.options.map((option) => html`

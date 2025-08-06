@@ -24,6 +24,14 @@ export class CorePage extends PageMixin(LocalizeMixin(LitElement)) {
     document.body.removeChild(loader)
   }
 
+  changeBreakpoint (breakpoint, callback) {
+    const mediaQuery = window.matchMedia(`(max-width: ${breakpoint}px)`)
+
+    callback(mediaQuery.matches)
+
+    mediaQuery.addEventListener('change', (event) => callback(event.matches))
+  }
+
   get header () {
     return html`
       <app-header></app-header>

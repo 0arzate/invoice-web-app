@@ -85,6 +85,12 @@ button[variant=full-icon] fontawesome-icon {
   --icon-size: .7rem;
   margin-bottom: 4px;
 }
+
+@media (max-width: 768px) {
+  button[variant=icon] {
+    gap: 8px;
+  }
+}
 `
 
 export default styles

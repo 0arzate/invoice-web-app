@@ -5,6 +5,8 @@
 
     "home-page.title": "Facturas",
     "home-page.subtitle": "{ invoices, plural, =0 {No hay facturas} one { 1 factura } other { # facturas } }",
+    "home-page.responsive.subtitle": "{ invoices, plural, =0 {No hay facturas} one { 1 factura } other { # facturas } }",
+    "home-page.button.responsive.new-invoice": "Nueva",
     "home-page.button.new-invoice": "Nueva factura",
     "home-page.loader.get-invoices": "Cargando facturas",
     "home-page.messages.not-found.title": "No hay nada aquí",
@@ -18,7 +20,8 @@
 
     "invoice-detail-page.loader.get-invoice-detail": "Cargando detalle de factura",
 
-    "app-dropdown.label": "Filtrar por estado"
+    "app-dropdown.label": "Filtrar por estado",
+    "app-dropdown.responsive.label": "Filtros"
   },
   "en-US": {
     "languages.es-mx": "Spanish",
@@ -26,7 +29,9 @@
 
     "home-page.title": "Invoices",
     "home-page.subtitle": "{ invoices, plural, =0 {No invoices} other { There are # total invoices } }",
+    "home-page.responsive.subtitle": "{ invoices, plural, =0 {No invoices} other { # invoices } }",
     "home-page.button.new-invoice": "New invoice",
+    "home-page.button.responsive.new-invoice": "New",
     "home-page.loader.get-invoices": "Loading invoices",
     "home-page.messages.not-found.title": "There is nothing here",
     "home-page.messages.not-found.description": "Create an invoice by clicking the New Invoice button and get started",
@@ -36,6 +41,7 @@
     "invoice-card.status.draft": "Draft",
     "app-loader.message": "Loading...",
 
-    "app-dropdown.label": "Filter by status"
+    "app-dropdown.label": "Filter by status",
+    "app-dropdown.responsive.label": "Filter"
   }
 }

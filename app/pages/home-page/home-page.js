@@ -2,7 +2,7 @@ import { html } from 'lit'
 
 import { CorePage } from '../../utils'
 
-import { BUTTON_TYPES, THEMES } from '../../utils/constants'
+import { BUTTON_TYPES, MEDIA_QUERIES, THEMES } from '../../utils/constants'
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './home-page.css'
@@ -20,6 +20,16 @@ export class HomePage extends CorePage {
     this.queries = []
     this.invoices = []
     this.isLoading = false
+
+    this.subtitle = 'home-page.subtitle'
+    this.dropdownLabel = 'app-dropdown.label'
+    this.buttonText = 'home-page.button.new-invoice'
+
+    this.changeBreakpoint(MEDIA_QUERIES.MOBILE, (isResponsive) => {
+      this.updateSubtitle(isResponsive)
+      this.updateDropdownLabel(isResponsive)
+      this.updateButtonText(isResponsive)
+    })
   }
 
   static get is () {
@@ -33,7 +43,10 @@ export class HomePage extends CorePage {
   static get properties () {
     return {
       invoices: { type: Array },
-      isLoading: { type: Boolean }
+      isLoading: { type: Boolean },
+      subtitle: { type: String },
+      dropdownLabel: { type: String },
+      buttonText: { type: String }
     }
   }
 
@@ -103,6 +116,18 @@ export class HomePage extends CorePage {
     getInvoices.queries = { status: this.queries.join(',') }
   }
 
+  updateSubtitle (isResponsive) {
+    this.subtitle = isResponsive ? 'home-page.responsive.subtitle' : 'home-page.subtitle'
+  }
+
+  updateDropdownLabel (isResponsive) {
+    this.dropdownLabel = isResponsive ? 'app-dropdown.responsive.label' : 'app-dropdown.label'
+  }
+
+  updateButtonText (isResponsive) {
+    this.buttonText = isResponsive ? 'home-page.button.responsive.new-invoice' : 'home-page.button.new-invoice'
+  }
+
   render () {
     return html`
       <app-layout>
@@ -113,14 +138,17 @@ export class HomePage extends CorePage {
             <header class="invoices-header">
               <div>
                 <h1>${this.t('home-page.title')}</h1>
-                <h2>${this.t('home-page.subtitle', { invoices: this.invoices.length })}</h2>
+                <h2>${this.t(this.subtitle, { invoices: this.invoices.length })}</h2>
               </div>
               <div class="invoices-header-actions">
-                <app-dropdown @dropdown-change="${this.setGetInvoiceQueries}"></app-dropdown>
+                <app-dropdown
+                  label="${this.dropdownLabel}"
+                  @dropdown-change="${this.setGetInvoiceQueries}"
+                ></app-dropdown>
                 <button-default
                   .variant="${BUTTON_TYPES.ICON}"
                   .icon="${faCirclePlus}"
-                >${this.t('home-page.button.new-invoice')}</button-default>
+                >${this.t(this.buttonText)}</button-default>
               </div>
             </header>
 
