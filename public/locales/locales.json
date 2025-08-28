@@ -11,6 +11,7 @@
     "home-page.loader.get-invoices": "Cargando facturas",
     "home-page.messages.not-found.title": "No hay nada aquí",
     "home-page.messages.not-found.description": "Crea una factura haciendo clic en el botón 'Nueva factura' y empieza.",
+    "home-page.notification.error.get-invoices": "No se pudieron cargar las facturas, intenta de nuevo más tarde.",
 
     "invoice-card.status.paid": "Pagada",
     "invoice-card.status.pending": "Pendiente",
@@ -35,6 +36,7 @@
     "home-page.loader.get-invoices": "Loading invoices",
     "home-page.messages.not-found.title": "There is nothing here",
     "home-page.messages.not-found.description": "Create an invoice by clicking the New Invoice button and get started",
+    "home-page.notification.error.get-invoices": "Invoices could not be loaded, please try again later.",
 
     "invoice-card.status.paid": "Paid",
     "invoice-card.status.pending": "Pending",

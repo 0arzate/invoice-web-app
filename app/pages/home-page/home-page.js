@@ -161,7 +161,7 @@ export class HomePage extends CorePage {
         @invoices-loading="${() => this.showLoader('home-page.loader.get-invoices', { invoiceId: this.params.id })}"
         @invoices-success="${this.setInvoices}"
         @invoices-finished="${() => this.hideLoader()}"
-        @invoices-error="${(event) => console.log(event)}"
+        @invoices-error="${() => this.showNotification(this.t('home-page.notification.error.get-invoices'))}"
       ></get-invoices>
     `
   }

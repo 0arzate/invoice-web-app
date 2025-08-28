@@ -10,6 +10,7 @@ import styles from './index.css'
 
 import './components/app-layout/app-layout'
 import './components/fontawesome-icon/fontawesome-icon'
+import './components/app-notification/app-notification'
 
 import {
   setUrl,
