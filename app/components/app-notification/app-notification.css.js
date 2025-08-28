@@ -7,6 +7,10 @@ export const styles = css`
   padding: 0;
 }
 
+:host {
+  --notification-text-color: #ffffff;
+}
+
 main {
   position: fixed;
   bottom: 0;
@@ -19,6 +23,7 @@ main {
 main p {
   font-size: 1.7rem;
   font-weight: 400;
+  color: var(--notification-text-color);
 }
 
 @media (max-width: 768px) {
