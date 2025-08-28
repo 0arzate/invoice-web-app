@@ -26,6 +26,10 @@ export class AppHeader extends LitElement {
     return styles
   }
 
+  firstUpdated () {
+    this.isDarkMode = document.documentElement.classList.contains(THEMES.DARK_MODE)
+  }
+
   get iconTheme () {
     return this.isDarkMode ? faSun : faMoon
   }
