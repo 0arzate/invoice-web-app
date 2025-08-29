@@ -12,6 +12,7 @@ import '../../components/button-default/button-default'
 import '../../components/invoice-card/invoice-card'
 import '../../components/app-dropdown/app-dropdown'
 import '../../utils/services/logical-components/get-invoices'
+import '../../components/left-modal/left-modal'
 
 export class HomePage extends CorePage {
   constructor () {
@@ -128,6 +129,12 @@ export class HomePage extends CorePage {
     this.buttonText = isResponsive ? 'home-page.button.responsive.new-invoice' : 'home-page.button.new-invoice'
   }
 
+  openModal () {
+    const leftModal = this.shadowRoot.querySelector('left-modal')
+
+    leftModal.toogleModal()
+  }
+
   render () {
     return html`
       <app-layout>
@@ -148,6 +155,7 @@ export class HomePage extends CorePage {
                 <button-default
                   .variant="${BUTTON_TYPES.ICON}"
                   .icon="${faCirclePlus}"
+                  @click="${() => this.openModal()}"
                 >${this.t(this.buttonText)}</button-default>
               </div>
             </header>
@@ -156,6 +164,8 @@ export class HomePage extends CorePage {
           </section>
         </main>
       </app-layout>
+
+      <left-modal></left-modal>
 
       <get-invoices
         @invoices-loading="${() => this.showLoader('home-page.loader.get-invoices', { invoiceId: this.params.id })}"
