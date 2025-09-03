@@ -22,7 +22,32 @@
     "invoice-detail-page.loader.get-invoice-detail": "Cargando detalle de factura",
 
     "app-dropdown.label": "Filtrar por estado",
-    "app-dropdown.responsive.label": "Filtros"
+    "app-dropdown.responsive.label": "Filtros",
+
+    "invoice-form.title.new-invoice": "Nueva factura",
+    "invoice-form.subtitle.bill-from": "Factura de",
+    "invoice-form.subtitle.bill-to": "Factura a",
+    "invoice-form.subtitle.item-list": "Lista de artículos",
+    "invoice-form.item-list.item-name": "Nombre del artículo",
+    "invoice-form.item-list.item-quantity": "Cantidad",
+    "invoice-form.item-list.item-quantity-abbreviation": "Cant.",
+    "invoice-form.item-list.item-price": "Precio",
+    "invoice-form.item-list.item-total": "Total",
+    "invoice-form.buttons.add-item": "Añadir nuevo artículo",
+    "invoice-form.buttons.discard": "Descartar",
+    "invoice-form.buttons.save-as-draft": "Guardar como borrador",
+    "invoice-form.buttons.save-and-send": "Guardar y enviar",
+    "invoice-form.inputs.street-address": "Calle",
+    "invoice-form.inputs.city": "Ciudad",
+    "invoice-form.inputs.post-code": "Código postal",
+    "invoice-form.inputs.country": "País",
+    "invoice-form.inputs.client-name": "Nombre del cliente",
+    "invoice-form.inputs.client-email": "Correo del cliente",
+    "invoice-form.inputs.client-address": "Calle del cliente",
+    "invoice-form.inputs.client-city": "Ciudad del cliente",
+    "invoice-form.inputs.client-post-code": "Código postal del cliente",
+    "invoice-form.inputs.payment-terms": "Condiciones de pago",
+    "invoice-form.inputs.project-description": "Descripción del proyecto"
   },
   "en-US": {
     "languages.es-mx": "Spanish",
@@ -44,6 +69,31 @@
     "app-loader.message": "Loading...",
 
     "app-dropdown.label": "Filter by status",
-    "app-dropdown.responsive.label": "Filter"
+    "app-dropdown.responsive.label": "Filter",
+
+    "invoice-form.title.new-invoice": "New invoice",
+    "invoice-form.subtitle.bill-from": "Bill from",
+    "invoice-form.subtitle.bill-to": "Bill to",
+    "invoice-form.subtitle.item-list": "Item list",
+    "invoice-form.item-list.item-name": "Item name",
+    "invoice-form.item-list.item-quantity": "Quantity",
+    "invoice-form.item-list.item-quantity-abbreviation": "Qty.",
+    "invoice-form.item-list.item-price": "Price",
+    "invoice-form.item-list.item-total": "Total",
+    "invoice-form.buttons.add-item": "Add new item",
+    "invoice-form.buttons.discard": "Discard",
+    "invoice-form.buttons.save-as-draft": "Save as draft",
+    "invoice-form.buttons.save-and-send": "Save & send",
+    "invoice-form.inputs.street-address": "Street address",
+    "invoice-form.inputs.city": "City",
+    "invoice-form.inputs.post-code": "Post code",
+    "invoice-form.inputs.country": "Country",
+    "invoice-form.inputs.client-name": "Client's name",
+    "invoice-form.inputs.client-email": "Client's email",
+    "invoice-form.inputs.client-address": "Client's street address",
+    "invoice-form.inputs.client-city": "Client's city",
+    "invoice-form.inputs.client-post-code": "Client's post code",
+    "invoice-form.inputs.payment-terms": "Payment terms",
+    "invoice-form.inputs.project-description": "Project description"
   }
 }
