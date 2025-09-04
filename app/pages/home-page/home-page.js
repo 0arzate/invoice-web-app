@@ -13,6 +13,7 @@ import '../../components/invoice-card/invoice-card'
 import '../../components/app-dropdown/app-dropdown'
 import '../../utils/services/logical-components/get-invoices'
 import '../../components/left-modal/left-modal'
+import '../../components/invoice-form/invoice-form'
 
 export class HomePage extends CorePage {
   constructor () {
@@ -165,7 +166,9 @@ export class HomePage extends CorePage {
         </main>
       </app-layout>
 
-      <left-modal></left-modal>
+      <left-modal>
+        <invoice-form></invoice-form>
+      </left-modal>
 
       <get-invoices
         @invoices-loading="${() => this.showLoader('home-page.loader.get-invoices', { invoiceId: this.params.id })}"
