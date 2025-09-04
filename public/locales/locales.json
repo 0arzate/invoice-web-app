@@ -46,6 +46,8 @@
     "invoice-form.inputs.client-address": "Calle del cliente",
     "invoice-form.inputs.client-city": "Ciudad del cliente",
     "invoice-form.inputs.client-post-code": "Código postal del cliente",
+    "invoice-form.inputs.client-country": "País del cliente",
+    "invoice-form.inputs.invoice-date": "Fecha de factura",
     "invoice-form.inputs.payment-terms": "Condiciones de pago",
     "invoice-form.inputs.project-description": "Descripción del proyecto"
   },
@@ -93,6 +95,8 @@
     "invoice-form.inputs.client-address": "Client's street address",
     "invoice-form.inputs.client-city": "Client's city",
     "invoice-form.inputs.client-post-code": "Client's post code",
+    "invoice-form.inputs.client-country": "Client's country",
+    "invoice-form.inputs.invoice-date": "Invoice date",
     "invoice-form.inputs.payment-terms": "Payment terms",
     "invoice-form.inputs.project-description": "Project description"
   }
