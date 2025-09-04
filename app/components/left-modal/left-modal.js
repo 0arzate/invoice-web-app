@@ -7,7 +7,7 @@ class LeftModal extends LocalizeMixin(LitElement) {
   constructor () {
     super()
 
-    this.isOpen = false
+    this.isOpen = true
   }
 
   static get properties () {
