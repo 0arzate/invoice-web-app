@@ -32,6 +32,27 @@ button {
   width: calc(50% + 103px);
   height: 100vh;
 }
+
+@media (max-width: 768px) {
+  main {
+    top: 80px;
+    left: 0;
+  }
+  section {
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: calc(100vh - 80px);
+  }
+  button {
+    width: 100%;
+  }
+}
+@media (max-width: 510px) {
+  section {
+    width: 100%;
+  }
+}
 `
 
 export default styles

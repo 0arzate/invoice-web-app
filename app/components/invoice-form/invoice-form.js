@@ -58,21 +58,21 @@ class InvoiceForm extends LocalizeMixin(LitElement) {
           <button-default .icon="${faPlus}" variant="${BUTTON_TYPES.FULL_ICON}">
             ${this.t('invoice-form.buttons.add-item')}
           </button-default>
-          <section class="actions">
-            <button-default variant="${BUTTON_TYPES.LIGHT}">
-              ${this.t('invoice-form.buttons.discard')}
-            </button-default>
-            <div>
-              <button-default variant="${BUTTON_TYPES.DARK}">
-                ${this.t('invoice-form.buttons.save-as-draft')}
-              </button-default>
-              <button-default>
-                ${this.t('invoice-form.buttons.save-and-send')}
-              </button-default>
-            </div>
-          </section>
         </section>
       </form>
+      <section class="actions">
+        <button-default variant="${BUTTON_TYPES.LIGHT}">
+          ${this.t('invoice-form.buttons.discard')}
+        </button-default>
+        <div>
+          <button-default variant="${BUTTON_TYPES.DARK}">
+            ${this.t('invoice-form.buttons.save-as-draft')}
+          </button-default>
+          <button-default>
+            ${this.t('invoice-form.buttons.save-and-send')}
+          </button-default>
+        </div>
+      </section>
     `
   }
 }
