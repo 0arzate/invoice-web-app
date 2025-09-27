@@ -35,7 +35,7 @@
     "invoice-form.item-list.item-total": "Total",
     "invoice-form.buttons.add-item": "Añadir nuevo artículo",
     "invoice-form.buttons.discard": "Descartar",
-    "invoice-form.buttons.save-as-draft": "Guardar como borrador",
+    "invoice-form.buttons.save-as-draft": "Guardar borrador",
     "invoice-form.buttons.save-and-send": "Guardar y enviar",
     "invoice-form.inputs.street-address": "Calle",
     "invoice-form.inputs.city": "Ciudad",
